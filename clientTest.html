@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<body>
+  <h1>WebSocket Test</h1>
+  <hr>
+  <div id="pannel">
+    <p>Starting...</p>
+  </div>
+
+<script>
+function log(msg) {
+  var pnode = document.createElement('p');
+  pnode.innerText = msg;
+  document.getElementById('pannel').appendChild(pnode);
+};
+
+var ws = new WebSocket('ws://localhost:8000');
+
+ws.addEventListener('error', function(err){
+  log('Connection failed.');
+});
+
+ws.addEventListener('close', function(){
+  log('Connection closed.');
+});
+
+ws.addEventListener('open', function(){
+  log('Connection Success.');
+});
+
+ws.addEventListener('message', function(msg){
+  log('Get a message: ' + msg.data);
+});
+</script>
+</body>
+</html>
