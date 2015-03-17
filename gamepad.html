@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style type="text/css">
+    html, body{
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+    body{
+        position: relative;
+        background-color: #1f242c;
+    }
+    /* 用于显示logo或标题 */
+    .header{
+        margin: 0; padding: 20px 0;
+    }
+    .header h1{
+        margin: 0;
+        color: #ccc;
+        text-align: center;
+    }
+
+    .m-btns{
+        position: absolute;
+        width: 180px; height: 180px;
+    }
+    .g-left{ left: 8%; bottom: 12%;}
+    .g-right{ right: 8%; bottom: 12%;}
+    .m-btns .item-t { position: absolute; left: 60px; top: 0;}
+    .m-btns .item-l { position: absolute; left: 0; top: 60px;}
+    .m-btns .item-r { position: absolute; right: 0; top: 60px;}
+    .m-btns .item-b { position: absolute; left: 60px;top: 120px;}
+    .u-btn{
+        width: 60px; height: 60px;
+        border: 1px solid #088ef0;
+        border-radius: 30px;
+        background: -webkit-gradient(linear, left top, left bottom, from(#42abf8), to(#0888e6));
+        box-shadow: inset 0px 2px 0px rgba(255, 255, 255, 0.3), 0 2px 4px rgba(0, 0, 0, 0.15);
+        font-size: 36px; color: #fff; text-decoration: none;
+        outline: none;
+        cursor: pointer;
+        text-shadow: 1px 1px 6px #ff0, inset 0 1px 2px #000;
+    }
+    .u-btn:active{
+        border-color: #0880d7;
+        background: #2798eb;
+        box-shadow: inset 0px 2px 6px rgba(0, 0, 0, 0.2);
+        color: #2D76AC;
+    }
+
+    /*@media (orientation: portrait) {
+        #div1{
+            background: #f00;
+        }
+    }
+    @media (orientation: landscape) {
+        #div1{
+            background: #00f;
+        }
+    }*/
+    </style>
+</head>
+<body>
+<div class="header">
+    <h1>SONY</h1>
+</div>
+<div class="m-btns g-left">
+    <div class="item-t"><button class="u-btn" data-key="up">^</button></div>
+    <div class="item-l"><button class="u-btn" data-key="left">&lt;</button></div>
+    <div class="item-r"><button class="u-btn" data-key="right">&gt;</button></div>
+    <div class="item-b"><button class="u-btn" data-key="down">v</button></div>
+</div>
+<div class="m-btns g-right">
+    <div class="item-t"><button class="u-btn" data-key="A"></button></div>
+    <div class="item-l"><button class="u-btn" data-key="B"></button></div>
+    <div class="item-r"><button class="u-btn" data-key="C"></button></div>
+    <div class="item-b"><button class="u-btn" data-key="D"></button></div>
+</div>
+</body>
+</html>
