@@ -80,5 +80,37 @@
     <div class="item-r"><button class="u-btn" data-key="C"></button></div>
     <div class="item-b"><button class="u-btn" data-key="D"></button></div>
 </div>
+
+<script>
+(function(){
+    var ws = new WebSocket('ws://localhost:8080');
+    ws.addEventListener('error', function(err){
+      console.log('Connection failed.');
+    });
+
+    ws.addEventListener('close', function(){
+      console.log('Connection closed.');
+    });
+
+    ws.addEventListener('open', function(){
+      console.log('Connection Success.');
+    });
+
+    ws.addEventListener('message', function(msg){
+      console.log('Get a message: ' + msg.data);
+    });
+
+    var _bd = document.documentElement;
+    _bd.addEventListener('click', function(_e){
+        var _node = _e.target;
+        var _key = _node.getAttribute('data-key');
+        if(!_key){
+            return;
+        }
+        ws.send(_key);
+        console.log('send: '+_key);
+    }, false);
+})();
+</script>
 </body>
 </html>

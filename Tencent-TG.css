@@ -1,0 +1,133 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+table{border-collapse:collapse;border-spacing:0}
+fieldset,img{border:0}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}
+ol,ul{list-style:none}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}
+q:before,q:after{content:''}
+abbr,acronym{border:0;font-variant:normal}
+sup{vertical-align:text-top}
+sub{vertical-align:text-bottom}
+input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit}
+input,textarea,select{*font-size:100%}
+a{ text-decoration:none; color:#fff; }
+a:focus{ outline:none; }
+body{ position:relative; font-family:'\5fae\8f6f\96c5\9ed1',Tahoma; }
+.i{ display:block; background-repeat:no-repeat; text-indent:-999em; }
+.ti{ display:block; text-indent:-9999em; }
+.clearfix{ #zoom:1 }
+.clearfix:after{ content:'.'; height:0; line-height:0; display:block; clear:both; visibility:hidden; }
+.ell{ overflow:hidden; text-overflow:ellipsis; white-space:nowrap; display:block; }
+
+html,body,.w_wrap { overflow:hidden; width:100%; height:100%; }
+
+.w_wrap { background:#1e242c; }
+
+.w_wd,.w_bc,.w_zxl { display:none; }
+.w_wd .wd { width:170px; height:315px; position:absolute; left:50%; top:50%; margin:-100px 0 0 -85px; }
+.w_wd .wd .i { position:absolute; }
+@-webkit-keyframes nd {
+  0% { -webkit-transform:translate(-15px,-15px); }
+  50% { -webkit-transform:translate(0px,0px); }
+  100% { -webkit-transform:translate(15px,-15px); }
+}
+.w_wd .nd { z-index:20; position:absolute; -webkit-animation:nd 500ms linear alternate infinite; }
+.w_wd .wd0 { z-index:20; width:168px; height:213px; top:0; left:0; background-image:url(http://ossweb-img.qq.com/images/pvz/act/a20141120interactive/m/wd0.png); }
+@-webkit-keyframes wd1 {
+  0% { -webkit-transform:rotate(-10deg); }
+  50% { -webkit-transform:rotate(0) scaleY(0.8); }
+  100% { -webkit-transform:rotate(10deg); }
+}
+.w_wd .wd1 { -webkit-animation:wd1 500ms linear alternate infinite; -webkit-transform-origin:50% 100%; z-index:11; width:37px; height:96px; top:189px; left:67px; background-image:url(http://ossweb-img.qq.com/images/pvz/act/a20141120interactive/m/wd1.png); }
+@-webkit-keyframes wd2 {
+  0% { -webkit-transform:rotate(5deg); }
+  50% { -webkit-transform:rotate(-20deg); }
+  100% { -webkit-transform:rotate(-45deg); }
+}
+.w_wd .wd2 { -webkit-animation:wd2 500ms linear alternate infinite; -webkit-transform-origin:100% 0%; -webkit-transform:rotate(-20deg); z-index:30; width:52px; height:75px; top:77px; left:51px; background-image:url(http://ossweb-img.qq.com/images/pvz/act/a20141120interactive/m/wd2.png); }
+@-webkit-keyframes wd3 {
+  0% { -webkit-transform:rotate(0deg); }
+  25% { -webkit-transform:rotate(10deg); }
+  50% { -webkit-transform:rotate(0deg); }
+  100% { -webkit-transform:rotate(0deg); }
+}
+.w_wd .wd3 { -webkit-animation:wd3 1000ms infinite; -webkit-transform-origin:100% 100%; z-index:10; width:69px; height:54px; top:231px; left:16px; background-image:url(http://ossweb-img.qq.com/images/pvz/act/a20141120interactive/m/wd3.png); }
+@-webkit-keyframes wd4 {
+  0% { -webkit-transform:rotate(0deg); }
+  25% { -webkit-transform:rotate(-10deg); }
+  50% { -webkit-transform:rotate(0deg); }
+  100% { -webkit-transform:rotate(0deg); }
+}
+.w_wd .wd4 { -webkit-animation:wd4 1000ms 500ms infinite; -webkit-transform-origin:0% 100%; z-index:10; width:47px; height:50px; top:235px; right:40px; background-image:url(http://ossweb-img.qq.com/images/pvz/act/a20141120interactive/m/wd4.png); }
+.w_wd .wd5 { -webkit-animation:wd4 1000ms 300ms infinite; -webkit-transform-origin:0% 100%; z-index:30; width:88px; height:51px; top:259px; right:0; background-image:url(http://ossweb-img.qq.com/images/pvz/act/a20141120interactive/m/wd5.png); }
+.w_wd .wd6 { -webkit-animation:wd3 1000ms 300ms infinite; -webkit-transform-origin:100% 100%; z-index:30; width:79px; height:61px; top:254px; left:6px; background-image:url(http://ossweb-img.qq.com/images/pvz/act/a20141120interactive/m/wd6.png); }
+@-webkit-keyframes qp0 {
+  0% { -webkit-transform:rotate(5deg); }
+  5% { -webkit-transform:rotate(-5deg); }
+  10% { -webkit-transform:rotate(5deg); }
+  15% { -webkit-transform:rotate(-5deg); }
+  20% { -webkit-transform:rotate(0deg); }
+  100% { -webkit-transform:rotate(0deg); }
+}
+.w_wd .qp0 { -webkit-animation:qp0 1000ms infinite; -webkit-transform-origin:20% 100%; position:absolute; z-index:30; width:139px; height:99px; top:70px; right:20px; background-image:url(http://ossweb-img.qq.com/images/pvz/act/a20141120interactive/m/qp0.png); }
+.w_wd .tx { position:absolute; left:50%; bottom:5%; margin:0 0 0 -72px; width:144px; height:40px; background-image:url(http://ossweb-img.qq.com/images/pvz/act/a20141120interactive/m/wdTx.png); }
+.w_zxl .zxl { position:absolute; left:50%; top:50%; margin:-103px 0 0 -104px; width:208px; height:326px; }
+.w_zxl .zxl .i { position:absolute; }
+@-webkit-keyframes zxl0 {
+  0% { -webkit-transform:rotate(-5deg); }
+  50% { -webkit-transform:rotate(0) scaleY(0.93); }
+  100% { -webkit-transform:rotate(5deg); }
+}
+.w_zxl .zxl0 { -webkit-animation:zxl0 600ms linear alternate infinite; -webkit-transform-origin:50% 100%; z-index:10; left:31px; top:0; width:137px; height:317px; background-image:url(http://ossweb-img.qq.com/images/pvz/act/a20141120interactive/m/zxl0.png); }
+@-webkit-keyframes zxl1 {
+  0% { -webkit-transform:translate(-25px,0px) rotate(0deg); }
+  50% { -webkit-transform:translate(0px,15px) rotate(5deg); }
+  100% { -webkit-transform:translate(23px,0px) rotate(-3deg); }
+}
+.w_zxl .zxl1 { -webkit-animation:zxl1 600ms linear alternate infinite; -webkit-transform-origin:50% 0%; z-index:20; left:84px; top:36px; width:122px; height:221px; background-image:url(http://ossweb-img.qq.com/images/pvz/act/a20141120interactive/m/zxl1.png); }
+.w_zxl .zxl2 { z-index:30; left:0; bottom:0; width:202px; height:76px; background-image:url(http://ossweb-img.qq.com/images/pvz/act/a20141120interactive/m/zxl2.png); }
+.w_zxl .qp1 { -webkit-animation:qp0 1000ms infinite; -webkit-transform-origin:20% 100%; position:absolute; z-index:30; width:139px; height:99px; top:80px; right:20px; background-image:url(http://ossweb-img.qq.com/images/pvz/act/a20141120interactive/m/qp1.png); }
+.w_zxl .tx { position:absolute; left:50%; bottom:5%; margin:0 0 0 -126px; width:252px; height:18px; background-image:url(http://ossweb-img.qq.com/images/pvz/act/a20141120interactive/m/zxlTx.png); }
+.w_bc .bc { position:absolute; left:50%; top:50%; margin:-60px 0 0 -152px; width:304px; height:240px;  }
+.w_bc .bc .i { position:absolute; }
+@-webkit-keyframes bc0 {
+  0% { -webkit-transform:translate(20px,0px) scaleY(1.1) rotate(10deg); }
+  50% { -webkit-transform:translate(0,30px) scaleY(1) rotate(0deg); }
+  100% { -webkit-transform:translate(-10px,0px) scaleY(1.1) rotate(-3deg); }
+}
+.w_bc .bc0 { -webkit-animation:bc0 450ms linear alternate infinite; -webkit-transform-origin:50% 100%; z-index:30; width:147px; height:104px; left:62px; top:0; background-image:url(http://ossweb-img.qq.com/images/pvz/act/a20141120interactive/m/bc0.png); }
+@-webkit-keyframes bc1 {
+  0% { -webkit-transform:translate(10px,10px) scaleY(1.1) rotate(10deg); }
+  50% { -webkit-transform:translate(0,30px) scaleY(1) rotate(0deg); }
+  100% { -webkit-transform:translate(-10px,10px) scaleY(1.1) rotate(-3deg); }
+}
+.w_bc .bc1 { -webkit-animation:bc1 450ms linear alternate infinite; -webkit-transform-origin:50% 100%; z-index:20; width:183px; height:79px; left:42px; top:27px; background-image:url(http://ossweb-img.qq.com/images/pvz/act/a20141120interactive/m/bc1.png); }
+@-webkit-keyframes bc2 {
+  0% { -webkit-transform:translate(10px,0px) scaleY(1.1) rotate(10deg); }
+  50% { -webkit-transform:translate(0,30px) scaleY(1) rotate(0deg); }
+  100% { -webkit-transform:translate(-10px,0px) scaleY(1.1) rotate(-3deg); }
+}
+.w_bc .bc2 { -webkit-animation:bc2 450ms linear alternate infinite; -webkit-transform-origin:50% 100%; z-index:10; width:181px; height:79px; left:49px; top:47px; background-image:url(http://ossweb-img.qq.com/images/pvz/act/a20141120interactive/m/bc2.png); }
+@-webkit-keyframes bc3 {
+  0% { -webkit-transform:scaleY(1) rotate(5deg); }
+  50% { -webkit-transform:scaleY(0.85) rotate(0deg); }
+  100% { -webkit-transform:scaleY(1) rotate(-3deg); }
+}
+.w_bc .bc3 { -webkit-animation:bc3 450ms linear alternate infinite; -webkit-transform-origin:50% 100%; z-index:21; width:143px; height:198px; left:80px; bottom:0; background-image:url(http://ossweb-img.qq.com/images/pvz/act/a20141120interactive/m/bc3.png); }
+@-webkit-keyframes bc4{
+  0% { -webkit-transform:scaleY(1); }
+  50% { -webkit-transform:scaleY(0.85); }
+  100% { -webkit-transform:scaleY(1); }
+}
+.w_bc .bc4 { -webkit-animation:bc4 450ms 100ms linear alternate infinite; -webkit-transform-origin:50% 100%; z-index:9; width:128px; height:180px; right:0; top:54px; background-image:url(http://ossweb-img.qq.com/images/pvz/act/a20141120interactive/m/bc4.png); }
+@-webkit-keyframes bc5 {
+  0% { -webkit-transform:rotate(0deg); }
+  25% { -webkit-transform:rotate(4deg); }
+  50% { -webkit-transform:translate(5px,5px) scaleX(0.95) rotate(8deg); }
+  75% { -webkit-transform:translate(0,5px) rotate(4deg); }
+  100% { -webkit-transform:translate(0,0) rotate(0deg); }
+}
+.w_bc .bc5 { -webkit-animation:bc5 400ms linear infinite; -webkit-transform-origin:100% 100%; z-index:10; width:146px; height:81px; left:0; top:145px; background-image:url(http://ossweb-img.qq.com/images/pvz/act/a20141120interactive/m/bc5.png); }
+.w_bc .qp2 { -webkit-animation:qp0 1000ms infinite; -webkit-transform-origin:20% 100%; position:absolute; z-index:30; width:139px; height:99px; top:104px; right:20px; background-image:url(http://ossweb-img.qq.com/images/pvz/act/a20141120interactive/m/qp2.png); }
+.w_bc .tx { position:absolute; left:50%; bottom:5%; margin:0 0 0 -126px; width:252px; height:19px; background-image:url(http://ossweb-img.qq.com/images/pvz/act/a20141120interactive/m/bcTx.png); }/*  |xGv00|7e557b88938022554d595a837f038523 */

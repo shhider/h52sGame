@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<!-- 腾讯游戏，植物大战僵尸Web版，手机端 -->
+<html lang="zh-CN">
+<head>
+<meta charset="gbk">
+<meta name="robots" content="all">
+<meta name="author" content="Tencent-TGideas">
+<meta name="Copyright" content="Tencent">
+<meta name="Description" content="植物大战僵尸online官方网站" />
+<meta name="Keywords" content="植物大战僵尸OL,PVZ,植物大战僵尸online,植物,僵尸,正版植物,植物大战僵尸网页版,激活码,休闲,塔防,网页游戏,不花钱,腾讯,好玩的页游,最新页游" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta id="viewport" name="viewport" content="width=320,minimum-scale=1,maximum-scale=5,user-scalable=no">
+<title>勇闯秦陵 - 植物大战僵尸Online - 腾讯游戏</title>
+<link rel="stylesheet" href="./Tencent-TG.css"/>
+<!-- 页面设计：svenlin | 页面制作：kimixiao | 创建：2014-11-20 | 团队博客：http://tgideas.qq.com -->
+</head>
+<body>
+<div class="w_wrap">
+    <div id="w_p0" class="w_wd">
+        <div class="wd">
+            <div class="nd">
+                <i id="dd5" class="i wd0"></i>
+                <i id="dd6" class="i wd2"></i>
+            </div>
+            <i id="dd4" class="i wd1"></i>
+            <i id="dd3" class="i wd3"></i>
+            <i id="dd2" class="i wd4"></i>
+            <i id="dd1" class="i wd5"></i>
+            <i id="dd0" class="i wd6"></i>
+        </div>
+        <i class="i qp0"></i>
+        <!--<i class="i tx"></i>-->
+    </div>
+    <div id="w_p1" class="w_zxl">
+        <div class="zxl">
+            <i class="i zxl0"></i>
+            <i class="i zxl1"></i>
+            <i class="i zxl2"></i>
+        </div>
+        <i class="i qp1"></i>
+        <!--<i class="i tx"></i>-->
+    </div>
+    <div id="w_p2" class="w_bc">
+        <div class="bc">
+            <i class="i bc0"></i>
+            <i class="i bc1"></i>
+            <i class="i bc2"></i>
+            <i class="i bc3"></i>
+            <i class="i bc4"></i>
+            <i class="i bc5"></i>
+        </div>
+        <i class="i qp2"></i>
+        <!--<i class="i tx"></i>-->
+    </div>
+</div>
+
+<!-- <script src="http://pingjs.qq.com/ping_tcss_ied.js"></script> -->
+<!-- <script>if(typeof(pgvMain) == 'function') pgvMain();</script> -->
+<script src="http://ossweb-img.qq.com/images/js/socket/socket.io.min.js"></script>
+<script>
+    var _g = function(id){
+        return document.getElementById(id);
+    };
+
+    var param = {
+        os:null
+    };
+
+    if(navigator.appVersion.indexOf('Android') != -1){
+        param.os = 'Android';
+    }else if(navigator.appVersion.indexOf('iPhone')!=-1 || navigator.appVersion.indexOf('iPad') != -1){
+        param.os = 'iOS';
+    }
+
+    function getQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]); return null;
+    }
+    function getHash(){
+        return getQueryString('token');
+    }
+    var getId = getHash(); //截取标识ID
+    var socket = io.connect("http://101.227.160.49:80");
+    var connected = false;
+    socket.on("connect", function(){
+        socket.emit("GetMobileId", getId);
+    });
+    socket.on("ScanMobile",function(data){//成功显示操作
+        connected = true;
+    });
+    socket.on("disconnect", function(){});
+
+    document.addEventListener("DOMContentLoaded",function(e){
+        var cwid = e.target.activeElement.clientWidth,
+            viewport = _g('viewport');
+        if(navigator.appVersion.indexOf('Android') != -1){
+            _g('w_wrap').style.zoom = cwid/320;
+        }
+    });
+
+    socket.on("PCToMobile", function(p){
+        switch(p){
+            case 'success':
+                page++;
+                pageSw(page);
+                break;
+            case 'failed':
+                alert('失败');
+                break;
+        }
+    });
+
+    var page = 0;
+
+    var play = function(n){
+        socket.emit("MobileToPC",{code:getId,to:n})
+    };
+
+    var pageSw = function(n){
+        var i;
+        for(i=0;i<3;i++){
+            _g('w_p'+i).style.display = 'none';
+        }
+        n>=2 ? n=2 : null;
+        _g('w_p'+n).style.display = 'block';
+        eval('p'+n)();
+    };
+
+    var p0 = function(){
+        var act = function(){
+            play(1);
+        };
+        _g('w_p0').removeEventListener('touchstart',act);
+        _g('w_p0').addEventListener('touchstart',act);
+    };
+
+    var act1,act2;
+
+    var p1 = function(){
+        act1 = function(e){
+            var acceleration = e.accelerationIncludingGravity;
+            var curTime = new Date().getTime();
+            if((curTime - last_update) > 100) {
+                var diffTime = curTime - last_update;
+                last_update = curTime;
+                x = acceleration.x;
+                y = acceleration.y;
+                z = acceleration.z;
+                var speed = Math.abs(x + y + z - last_x - last_y - last_z) / diffTime * 10000;
+                if(speed > SHAKE_THRESHOLD){
+                    play(2);
+                }
+                last_x = x;
+                last_y = y;
+                last_z = z;
+            }
+        };
+        if('ondevicemotion' in window){
+            var SHAKE_THRESHOLD;
+            if(param.os == 'Android'){
+                SHAKE_THRESHOLD = 500;
+            }else{
+                SHAKE_THRESHOLD = 1500;
+            }
+            var last_update = 0;
+            var x, y, z, last_x, last_y, last_z;
+            window.addEventListener('devicemotion',act1,false);
+        }
+    };
+
+    var p2 = function(){
+        act2 = function(e){
+            var acceleration = e.accelerationIncludingGravity;
+            var curTime = new Date().getTime();
+            if((curTime - last_update) > 100) {
+                var diffTime = curTime - last_update;
+                last_update = curTime;
+                x = acceleration.x;
+                y = acceleration.y;
+                z = acceleration.z;
+                var speed = Math.abs(x + y + z - last_x - last_y - last_z) / diffTime * 10000;
+                if(speed > SHAKE_THRESHOLD){
+                    play(3);
+                }
+                last_x = x;
+                last_y = y;
+                last_z = z;
+            }
+        };
+        if('ondevicemotion' in window){
+            var SHAKE_THRESHOLD;
+            if(param.os == 'Android'){
+                SHAKE_THRESHOLD = 500;
+            }else{
+                SHAKE_THRESHOLD = 1500;
+            }
+            var last_update = 0;
+            var x, y, z, last_x, last_y, last_z;
+            window.removeEventListener('devicemotion',act1,false);
+            window.addEventListener('devicemotion',act2,false);
+        }
+    };
+
+    var init = function(){
+        var hash = getQueryString('page');
+        switch(hash){
+            case '0':
+                pageSw(0);
+                break;
+            case '1':
+                pageSw(1);
+                break;
+            case '2':
+                pageSw(2);
+                break;
+            default:
+                pageSw(0);
+        }
+    };
+    init();
+</script>
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=28529446"></script>
+</body>
+</html>
